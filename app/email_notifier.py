@@ -24,9 +24,6 @@ def send_email(to_email, subject, body):
 
     
 def get_current_price(crypto_symbol, data):
-    output_file_path="crypto_data.txt"
-    with open(output_file_path, "w") as file:
-        file.write(str(data))
     current_price = data[crypto_symbol]["USD"]
     return int(round(current_price))
 
