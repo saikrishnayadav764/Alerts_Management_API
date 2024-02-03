@@ -149,7 +149,7 @@ To import the Alerts Management API collection into Postman, follow these steps:
 5. Select the downloaded collection file (`.json` format) from your computer.
 6. Once the file is uploaded, click on the "Import" button to import the collection into Postman.
 
-After importing the collection, you'll be able to see all the API endpoints along with example requests and responses. You can then use these requests to interact with the Bookstore Management API directly from Postman.
+After importing the collection, you'll be able to see all the API endpoints along with example requests and responses. You can then use these requests to interact with the Alerts Management API directly from Postman.
 
 ## Existing Users
 
