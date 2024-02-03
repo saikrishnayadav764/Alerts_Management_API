@@ -23,13 +23,11 @@ The Bookstore Management Application is a built using Python and Flask, designed
 
 ## Features
 
-- Add new books to the database.
-- Retrieve all books or a specific book by ISBN.
-- Update book details.
-- Delete books from the database.
+- Create new alerts to the database.
+- Retrieve all alerts.
+- Delete alerts from the database.
 - Basic authentication to restrict access to certain endpoints.
-- Unit tests for API endpoints.
-- JWT token-based authentication (Bonus feature).
+- JWT token-based authentication.
 
 ## Folder Structure
 
@@ -52,8 +50,8 @@ Alerts_Management_API/
 
 ```
 
-- **models**: Defines the schema for the User model, Alert model.
-- **routes**: Handles API endpoints for authentication and alerts.
+- **models.py**: Defines the schema for the User model, Alert model.
+- **routes.py**: Handles API endpoints for authentication and alerts.
 - **run.py**: Main entry point of the application.
 - **config.py**: Stores configuration such as database credentials.
 
@@ -61,25 +59,39 @@ Alerts_Management_API/
 
 To set up the application locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/saikrishnayadav764/Bookstore_Management_API.git`
-2. Change Directory: `cd Bookstore_Management_API-main`
+1. Clone the repository: `git clone https://github.com/saikrishnayadav764/Alerts_Management_API.git`
+2. Change Directory: `cd Alerts_Management_API-main`
 3. Install dependencies: `pip install -r requirements.txt`
 4. Configure variables: MONGO_URI = "mongodb+srv://naruto:naruto@cluster0.be644zi.mongodb.net/db"
-5. Start the server: `python run.py`
+5. In windows Install redis from this link(https://github.com/tporadowski/redis/releases/download/v5.0.14.1/Redis-x64-5.0.14.1.msi)
+6. Start the server: `python run.py`
+7. Access Your Application: http://localhost:5000
+
+To set up the application in docker, follow these steps:
+1. Build Docker Image: docker-compose build
+2. Run Docker Containers: docker-compose up
+3. Access Your Application: http://localhost:8080
+
 
 ## Usage
 
-The server starts at http://localhost:5000 by running `python run.py`. Once the server is running, you can access the defined API endpoints.
+1. The server starts at http://localhost:5000 by running `python run.py`. Once the server is running, you can access the defined API endpoints.
+2. In docker the server starts at http://localhost:8080
+
 
 ## API Endpoints
 
-### Books
+### Alerts
 
-- **POST /api/books**: Add a new book.
-- **GET /api/books**: Retrieve all books.
-- **GET /api/books/<ISBN>**: Retrieve a specific book by ISBN.
-- **PUT /api/books/<ISBN>**: Update book details.
-- **DELETE /api/books/<ISBN>**: Delete a book.
+- **POST /auth/login**: To get access token.
+- **POST /auth/register**: To register new user.
+- **POST /alerts/create**: creates a new alert.
+- **GET /alerts**: Retrieves all alerts.
+- **GET /alerts?status=created**: Retrieves all alerts with status created.
+- **GET /alerts?status=created**: Retrieves all alerts with status triggered.
+- **DELETE /alerts/<alert_id>**: Delete alert.
+- **GET /alerts/check**: Shows triggered alerts and notifies user through gmail.
+
 
 ### Authentication
 
