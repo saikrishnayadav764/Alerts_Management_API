@@ -1,6 +1,6 @@
-# Bookstore Management Application
+# Alerts Management Application
 
-The Bookstore Management Application is a Flask-based system designed to manage and store books securely. It offers functionalities to create, read, update, and delete books via a RESTful API.
+The Alerts Management Application is a Flask-based system designed to manage and store alerts securely. It offers functionalities to create alerts, to delete alerts, to get triggered alerts via a RESTful API.
 
 ## Table of Contents
 
@@ -13,8 +13,7 @@ The Bookstore Management Application is a Flask-based system designed to manage 
 - [Authentication](#authentication)
 - [Curl Commands](#curl-commands)
 - [Importing the Postman Collection](#Importing-the-Postman-Collection)
-- [Allowed Users](#allowed-users)
-- [Testing](#testing)
+- [Existing Users](#Existing-users)
 - [Technologies Used](#technologies-used)
 - [Deployed API Link](#Deployed-Link)
 
@@ -37,25 +36,24 @@ The Bookstore Management Application is a built using Python and Flask, designed
 The application follows a well-organized folder structure:
 
 ```
-Bookstore_Management_API/
-│
-├── app/
-│   ├── __init__.py
-│   ├── models.py
-│   ├── routes.py
-│   ├── auth.py
-│   └── tests/
-│       ├── __init__.py
-│       └── test_routes.py
-│
-├── config.py
-├── requirements.txt
-└── run.py
+Alerts_Management_API/
+|-- app/
+|   |-- __init__.py
+|   |-- models.py
+|   |-- routes.py
+|   |-- auth.py
+|   |-- alerts.py
+|   |-- email_notifier.py
+|-- config.py
+|-- requirements.txt
+|-- run.py
+|-- Dockerfile
+|-- docker-compose.yml
+
 ```
 
-- **models**: Defines the schema for the Book model.
-- **routes**: Handles API endpoints for authentication and books.
-- **tests**: Includes test files for endpoint testing.
+- **models**: Defines the schema for the User model, Alert model.
+- **routes**: Handles API endpoints for authentication and alerts.
 - **run.py**: Main entry point of the application.
 - **config.py**: Stores configuration such as database credentials.
 
@@ -149,24 +147,24 @@ To import the Bookstore Management API collection into Postman, follow these ste
 
 After importing the collection, you'll be able to see all the API endpoints along with example requests and responses. You can then use these requests to interact with the Bookstore Management API directly from Postman.
 
-## Allowed Users
+## Existing Users
 
-The application allows the following users to authenticate:
+The application has the following default users to authenticate:
 
 - username: admin, password: admin
-
-## Testing
-
-The application includes comprehensive test suites to validate the implemented functionalities. To run the tests, use the command `python -m unittest`.
 
 ## Technologies Used
 
 - Python 3.x
-- Flask
-- Flask JWT Extended
-- Flask PyMongo
-- PyJWT
-- PyMongo (for MongoDB)
+- flask==3.0.1
+- flask_jwt_extended==4.6.0
+- Flask-Caching==2.1.0
+- redis==5.0.1
+- flask_pymongo==2.3.0
+- Werkzeug==3.0.1
+- requests==2.31.0
+- uuid==1.30
+
 
 ## Deployed Link
 
