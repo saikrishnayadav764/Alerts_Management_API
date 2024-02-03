@@ -38,7 +38,7 @@ def delete_alert(alert_id):
 @jwt_required()
 def get_alerts():
     user_id = get_jwt_identity()
-    status_filter = request.args.get('status', 'created')
+    status_filter = request.args.get('status', None)
     page = int(request.args.get('page', 1))
     per_page = int(request.args.get('per_page', 10))
 
