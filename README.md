@@ -136,11 +136,11 @@ curl -X GET -H "Authorization: Bearer <access_token>" https://nice-jade-coati-ti
 curl -X DELETE -H "Authorization: Bearer <access_token>" https://nice-jade-coati-tie.cyclic.app/alerts/:alert_id
 ```
 
-Replace `:id` with the actual ISBN of the book you want to delete.
+Replace `:alert_id` with the actual alert_id of the alert you want to delete.
 
 ## Importing the Postman Collection
 
-To import the Bookstore Management API collection into Postman, follow these steps:
+To import the Alerts Management API collection into Postman, follow these steps:
 
 1. Download the Postman collection file by clicking [here](https://github.com/saikrishnayadav764/Alerts_Management_API/blob/main/Alerts.postman_collection.json).
 2. Open Postman.
