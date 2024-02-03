@@ -101,6 +101,14 @@ To set up the application in docker, follow these steps:
 
 Execute these `curl` commands in your terminal to interact with the API endpoints:
 
+### Register User (Register)
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d "{\"username\": \"harry\", \"password\": \"harry\", \"email\": \"harry@gmail.com\"}" https://nice-jade-coati-tie.cyclic.app/auth/register
+```
+
+Replace `username` and `password` with the credentials of the allowed users.
+
 ### Obtain Token (Login)
 
 ```bash
