@@ -104,44 +104,28 @@ Execute these `curl` commands in your terminal to interact with the API endpoint
 ### Obtain Token (Login)
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d "{\"username\": \"admin\", \"password\": \"admin\"}" https://mushy-bathing-suit-foal.cyclic.app/api/login
+curl -X POST -H "Content-Type: application/json" -d "{\"username\": \"admin\", \"password\": \"admin\"}" https://nice-jade-coati-tie.cyclic.app/auth/login
 ```
 
 Replace `username` and `password` with the credentials of the allowed users.
 
-### Adding a new book
+### Creating a new alert
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <access_token>" -d "{\"title\": \"Book Title\", \"author\": \"Author Name\", \"ISBN\": \"1234567890\", \"price\": 10.99, \"quantity\": 5}" https://mushy-bathing-suit-foal.cyclic.app/api/books
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <access_token>" -d "{\"target_price\": \"3000\", \"crypto_symbol\": \"ETH\"}" https://nice-jade-coati-tie.cyclic.app/alerts/create
 ```
 
-### Retrieving all books
+### Retrieving all alerts
 
 ```bash
-curl -X GET -H "Authorization: Bearer <access_token>" https://mushy-bathing-suit-foal.cyclic.app/api/books
+curl -X GET -H "Authorization: Bearer <access_token>" https://nice-jade-coati-tie.cyclic.app/alerts/
 ```
 
-### Retrieving a specific book by ISBN
+
+### Deleting a alert
 
 ```bash
-curl -X GET -H "Authorization: Bearer <access_token>" https://mushy-bathing-suit-foal.cyclic.app/api/books/:id
-```
-
-Replace `:id` with the actual ISBN of the book you want to retrieve.
-
-### Updating book details
-
-```bash
-curl -X PUT -H "Content-Type: application/json" -H "Authorization: Bearer <access_token>" -d "{\"title\": \"Updated Title\", \"author\": \"Updated Author\", \"price\": 12.99, \"quantity\": 10}" https://mushy-bathing-suit-foal.cyclic.app/api/books/:id
-
-```
-
-Replace `:id` with the actual ISBN of the book you want to update.
-
-### Deleting a book
-
-```bash
-curl -X DELETE -H "Authorization: Bearer <access_token>" https://mushy-bathing-suit-foal.cyclic.app/api/books/:id
+curl -X DELETE -H "Authorization: Bearer <access_token>" https://nice-jade-coati-tie.cyclic.app/alerts/:alert_id
 ```
 
 Replace `:id` with the actual ISBN of the book you want to delete.
@@ -150,7 +134,7 @@ Replace `:id` with the actual ISBN of the book you want to delete.
 
 To import the Bookstore Management API collection into Postman, follow these steps:
 
-1. Download the Postman collection file by clicking [here](https://github.com/saikrishnayadav764/Bookstore_Management_API/blob/main/Bookstore.postman_collection.json).
+1. Download the Postman collection file by clicking [here](https://github.com/saikrishnayadav764/Alerts_Management_API/blob/main/Alerts.postman_collection.json).
 2. Open Postman.
 3. Click on the "Import" button in the top left corner of the window.
 4. In the dialog that appears, click on the "Upload Files" tab.
@@ -180,5 +164,5 @@ The application has the following default users to authenticate:
 
 ## Deployed Link
 
-[https://mushy-bathing-suit-foal.cyclic.app/api/books]
+[https://nice-jade-coati-tie.cyclic.app/alerts]
 
