@@ -90,7 +90,7 @@ To set up the application in docker, follow these steps:
 - **GET /alerts?status=created**: Retrieves all alerts with status created.
 - **GET /alerts?status=triggered**: Retrieves all previous alerts with status triggered.
 - **DELETE /alerts/<alert_id>**: Delete alert.
-- **GET /alerts/check**: Shows triggered alerts at that particular time and notifies user through gmail.
+- **GET /alerts/check**: Shows triggered alerts at that particular time and notifies user through gmail, At the same it updates status to triggered.
 
 
 ### Authentication
