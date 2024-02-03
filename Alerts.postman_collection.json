@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "838888a2-e918-4453-a564-3e99286c2b97",
+		"name": "Alerts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21858876"
+	},
+	"item": [
+		{
+			"name": "To get access token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://nice-jade-coati-tie.cyclic.app/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "To register new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "https://nice-jade-coati-tie.cyclic.app/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieves all alerts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjk5MTE0NCwianRpIjoiOWEzZWQ1MTgtMzM5Yi00Y2M3LThjNmItMjNkMDAwZjQ2N2UxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzA2OTkxMTQ0LCJjc3JmIjoiYzNiMWZiODgtOTA2MS00ZWVhLWJkNjctNDhkZmFiZDBhZTVlIiwiZXhwIjoxNzE0NzY3MTQ0fQ.OClPmBKBzqCQ-bUNoY2TWRGcQ09gYe8d6j5vfkYzegs"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://nice-jade-coati-tie.cyclic.app/alerts"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieves all alerts with status created",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjk5MTE0NCwianRpIjoiOWEzZWQ1MTgtMzM5Yi00Y2M3LThjNmItMjNkMDAwZjQ2N2UxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzA2OTkxMTQ0LCJjc3JmIjoiYzNiMWZiODgtOTA2MS00ZWVhLWJkNjctNDhkZmFiZDBhZTVlIiwiZXhwIjoxNzE0NzY3MTQ0fQ.OClPmBKBzqCQ-bUNoY2TWRGcQ09gYe8d6j5vfkYzegs"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nice-jade-coati-tie.cyclic.app/alerts?status=created",
+					"protocol": "https",
+					"host": [
+						"nice-jade-coati-tie",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"alerts"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "created"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieves all alerts with status triggered",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjk5MTE0NCwianRpIjoiOWEzZWQ1MTgtMzM5Yi00Y2M3LThjNmItMjNkMDAwZjQ2N2UxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzA2OTkxMTQ0LCJjc3JmIjoiYzNiMWZiODgtOTA2MS00ZWVhLWJkNjctNDhkZmFiZDBhZTVlIiwiZXhwIjoxNzE0NzY3MTQ0fQ.OClPmBKBzqCQ-bUNoY2TWRGcQ09gYe8d6j5vfkYzegs"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nice-jade-coati-tie.cyclic.app/alerts?status=triggered",
+					"protocol": "https",
+					"host": [
+						"nice-jade-coati-tie",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"alerts"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "triggered"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete alert",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjk5MTE0NCwianRpIjoiOWEzZWQ1MTgtMzM5Yi00Y2M3LThjNmItMjNkMDAwZjQ2N2UxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzA2OTkxMTQ0LCJjc3JmIjoiYzNiMWZiODgtOTA2MS00ZWVhLWJkNjctNDhkZmFiZDBhZTVlIiwiZXhwIjoxNzE0NzY3MTQ0fQ.OClPmBKBzqCQ-bUNoY2TWRGcQ09gYe8d6j5vfkYzegs"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "https://nice-jade-coati-tie.cyclic.app/alerts/"
+			},
+			"response": []
+		},
+		{
+			"name": "creates a new alert",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjk5MTE0NCwianRpIjoiOWEzZWQ1MTgtMzM5Yi00Y2M3LThjNmItMjNkMDAwZjQ2N2UxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzA2OTkxMTQ0LCJjc3JmIjoiYzNiMWZiODgtOTA2MS00ZWVhLWJkNjctNDhkZmFiZDBhZTVlIiwiZXhwIjoxNzE0NzY3MTQ0fQ.OClPmBKBzqCQ-bUNoY2TWRGcQ09gYe8d6j5vfkYzegs"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"target_price\": \"3000\",\r\n    \"crypto_symbol\": \"BTC\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://nice-jade-coati-tie.cyclic.app/alerts/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Shows triggered alerts and notifies user through gmail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjk5MTE0NCwianRpIjoiOWEzZWQ1MTgtMzM5Yi00Y2M3LThjNmItMjNkMDAwZjQ2N2UxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzA2OTkxMTQ0LCJjc3JmIjoiYzNiMWZiODgtOTA2MS00ZWVhLWJkNjctNDhkZmFiZDBhZTVlIiwiZXhwIjoxNzE0NzY3MTQ0fQ.OClPmBKBzqCQ-bUNoY2TWRGcQ09gYe8d6j5vfkYzegs"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://nice-jade-coati-tie.cyclic.app/alerts/check"
+			},
+			"response": []
+		}
+	]
+}
