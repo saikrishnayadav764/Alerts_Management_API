@@ -2,6 +2,16 @@
 
 The Alerts Management Application is a Flask-based system designed to manage and store alerts securely. It offers functionalities to create alerts, to delete alerts, to get triggered alerts via a RESTful API.
 
+# Available Tokens
+
+BTC, ETH, USDC, XRP, USDT, SUI, ICP, BNB, ADA, FIL
+
+# API used to get current price
+
+- site: https://www.cryptocompare.com/
+- API_KEY = 'a84341ca60b24f5f3107af219b1b52acd53cac0defbdf2527cd42d1442099f1b'
+- url = https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,USDC,XRP,USDT,SUI,ICP,BNB,ADA,FIL&tsyms=USD&api_key=a84341ca60b24f5f3107af219b1b52acd53cac0defbdf2527cd42d1442099f1b
+
 ## Table of Contents
 
 - [Introduction](#introduction)
