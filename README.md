@@ -105,7 +105,7 @@ To set up the application in docker, follow these steps:
 
 ### Authentication
 
-- **POST /api/login**: Authenticate users and generate JWT tokens.
+- **POST /auth/login**: Authenticate users and generate JWT tokens.
 
 ## Curl Commands
 
